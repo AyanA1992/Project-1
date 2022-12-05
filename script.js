@@ -37,6 +37,7 @@ function handleGetData() {
 $.ajax(settings).then(function(data){
 console.log(data)
 $('.quote').text(data.content)
+$('.quote').append(`-${data.originator.name}`)
 } ,
 
 (error) => {

@@ -1,7 +1,7 @@
 
 ## QOTD Project1
 
-A web application that displays random/inspirational quotes using the inspiring quotes API https://rapidapi.com/martin.svoboda/api/quotes15/)
+A web application that displays random/inspirational quotes using the inspiring quotes API 
 
 ## Function
 Click the “Get Quote” button to generate random quote

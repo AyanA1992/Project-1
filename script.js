@@ -8,40 +8,26 @@ const settings = {
 		"X-RapidAPI-Host": "quotes15.p.rapidapi.com"
 	}
 };
-// $.ajax(settings).done(function (response) {
-// 	console.log(response);
-// });
-// URL:"https://motivational-quotes1.p.rapidapi.com/motivation"
-/////^API Link////
-
-// promise.then(
-//       (data) => {
-//         console.log(data);
-//       },
-//       (error) => {
-//         console.log("bad request: ", error);
-//       }
-//     );
-
 
 
 /////////elements/////////
-const $btn = $('#getQuoteBtn'); 
+const $btn = $('#getQuoteBtn');
 
 
 ///////////evnt
-$btn.on('click', handleGetData) 
+$btn.on('click', handleGetData)
 /////////functions////////
 
 function handleGetData() {
-$.ajax(settings).then(function(data){
-console.log(data)
-$('.quote').text(data.content)
-$('.quote').append(`-${data.originator.name}`)
-} ,
+	$.ajax(settings).then(function (data) {
+		console.log(data)
+		$('.quote').text(data.content)
+		$('.quote').append(`-${data.originator.name}`)
+	},
 
-(error) => {
-console.log("bad request: ", error);
- }
-)}
+		(error) => {
+			console.log("bad request: ", error);
+		}
+	)
+}
 
